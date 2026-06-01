@@ -1,0 +1,75 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/01 12:39:35 by eduaaugu          #+#    #+#             */
+/*   Updated: 2026/06/01 17:03:49 by eduaaugu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stddef.h>
+#include <stdlib.h>
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	**free_str(char	**str, size_t j);
+int		word_count(const char	*s, char c);
+
+char	**ft_split(char const *s, char c)
+{
+	char	**str;
+	size_t	i;
+	size_t	j;
+	size_t	start;
+
+	str = malloc((word_count(s, c) + 1) * sizeof(char *));
+	if (!str)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i] == '\0')
+			break;
+		start = i;
+		while (s[i] != c && s[i] != '\0')
+			i++;
+		str[j] = ft_substr(s, start, (i - start));
+		if (!str[j])
+			return (free_str(str, j));
+		j++;
+	}
+	str[j] = NULL;
+	return (str);
+}
+
+char **free_str(char	**str, size_t j)
+{
+	while (j > 0)
+	{
+		j--;
+		free(str[j]);
+	}
+	free(str);
+	return (NULL);
+}
+
+int	word_count(const char	*s, char c)
+{
+	size_t	count;
+	size_t	i;
+
+	count = 0;
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
+			count++;
+		i++;
+	}
+	return (count);
+}
