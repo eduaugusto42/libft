@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 09:03:47 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/01 09:49:24 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/02 17:42:30 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = ft_strlen(s1) + ft_strlen(s2);
 	sjoin = malloc(i + 1);
-	if (sjoin == 	NULL)
+	if (sjoin == NULL)
 		return (NULL);
 	i = 0;
 	while (s1[i] != '\0')

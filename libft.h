@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 09:37:47 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/02 17:26:20 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/02 17:56:54 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 # define LIBFT_H
 
 // External libraries
-#include <stddef.h>
-#include <stdlib.h>
+# include <stddef.h>
+# include <stdlib.h>
 
 // Part 1 - Libc functions
 int		ft_isalpha(int c);
@@ -61,7 +61,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 // Struct
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;

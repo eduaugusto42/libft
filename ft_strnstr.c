@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 14:02:53 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/05/29 16:00:22 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/02 17:48:11 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 				j++;
 				k++;
 				if (little[j] == '\0')
-					return ((char*)(big + i));
+					return ((char *)(big + i));
 			}
 		}
 		i++;

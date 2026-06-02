@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 09:13:31 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/02 16:25:50 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/02 17:50:25 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_memchr(const char *s, int c)
 		if (*s == c)
 			return ((char *)s);
 		if (*s == '\0')
-			break;
+			break ;
 		s++;
 	}
 	return (NULL);

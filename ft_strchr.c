@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 09:13:31 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/05/27 12:01:19 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/02 17:38:47 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*strchr(const char *s, int c)
 		if (*s == c)
 			return ((char *)s);
 		if (*s == '\0')
-			break;
+			break ;
 		s++;
 	}
 	return (NULL);
