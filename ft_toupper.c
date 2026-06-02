@@ -6,11 +6,11 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 08:01:08 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/05/27 08:09:33 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/02 16:45:44 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int toupper(int c)
+int	toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c -= 32;

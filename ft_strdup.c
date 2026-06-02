@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 char	*strdup(const char *s)
 {
@@ -31,14 +28,4 @@ char	*strdup(const char *s)
 	}
 	dup[i] = '\0';
 	return (dup);
-}
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	len;
-
-	len = 0;
-	while (s)
-		len++;
-	return (len);
 }

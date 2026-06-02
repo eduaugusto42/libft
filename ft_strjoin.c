@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(char const	*s);
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

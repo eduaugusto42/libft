@@ -6,12 +6,11 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 17:37:30 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/05/29 18:07:47 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/02 16:22:39 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void *calloc(size_t nmemb, size_t size)
 {

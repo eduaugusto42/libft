@@ -6,11 +6,11 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 12:35:59 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/05/26 18:51:29 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/02 16:27:50 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*memcpy(void *dest, const void *src, size_t n)
 {
