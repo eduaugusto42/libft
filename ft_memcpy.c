@@ -6,25 +6,23 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 12:35:59 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/02 16:27:50 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/02 18:23:03 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char		*d;
-	const char	*s;
-	size_t		i;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	d = (char *)dest;
-	s = (const char *)src;
-	i = 0;
-	while (i < n)
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	while (n > 0)
 	{
-		d[i] = s[i];
-		i++;
+		*d++ = *s++;
+		n--;
 	}
 	return (dest);
 }
