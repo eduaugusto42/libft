@@ -6,14 +6,14 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 13:32:30 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/03 11:50:53 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/03 14:14:19 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 size_t	check_sign(int	*n);
-size_t	decimal_length(int n);
+size_t	num_len(int n);
 
 char	*ft_itoa(int n)
 {
@@ -26,7 +26,7 @@ char	*ft_itoa(int n)
 	else if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
 	sign = check_sign(&n);
-	len = decimal_length(n);
+	len = num_len(n);
 	itoa = malloc(sign + len + 1);
 	if (!itoa)
 		return (NULL);
@@ -55,7 +55,7 @@ size_t	check_sign(int	*n)
 	return (sign);
 }
 
-size_t	decimal_length(int n)
+size_t	num_len(int n)
 {
 	size_t	len;
 
