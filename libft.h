@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 09:37:47 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/02 18:59:08 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/03 09:20:25 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 // External libraries
 # include <stddef.h>
 # include <stdlib.h>
+# include <stdint.h>
 
 // Part 1 - Libc functions
 int		ft_isalpha(int c);

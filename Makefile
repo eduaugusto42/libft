@@ -6,7 +6,7 @@
 #    By: eduaaugu <eduaaugu@student.42sp.org.b      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/18 17:24:11 by eduaaugu          #+#    #+#              #
-#    Updated: 2026/06/02 16:09:56 by eduaaugu         ###   ########.fr        #
+#    Updated: 2026/06/03 09:54:03 by eduaaugu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRC = ft_atoi.c ft_isascii.c ft_memcmp.c ft_strchr.c ft_strlen.c ft_substr.c \
 	  ft_memchr.c ft_split.c ft_strlcpy.c ft_strtrim.c
 
 
-OBJ = $(SRC:.c=.o)
+OBJS = $(SRC:.c=.o)
 
 all: $(NAME)
 

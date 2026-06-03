@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 17:09:05 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/05/29 17:22:58 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/03 09:46:11 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ char	*ft_strdup(const char *s)
 	char	*dup;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	dup = malloc(ft_strlen(s) + 1);
-	if (dup == NULL)
+	if (!dup)
 		return (NULL);
 	i = 0;
 	while (s[i] != '\0')
