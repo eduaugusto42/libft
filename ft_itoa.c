@@ -6,48 +6,64 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 13:32:30 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/02 16:24:43 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/03 11:50:53 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	decimal_value(int n);
+size_t	check_sign(int	*n);
+size_t	decimal_length(int n);
 
 char	*ft_itoa(int n)
 {
 	char	*itoa;
 	size_t	sign;
-	size_t	i;
+	size_t	len;
 
-	sign = 0;
-	if (n < 0)
-	{
-		n *= -1;
-		sign++;
-	}
-	i = decimal_value(n);
-	itoa = malloc(i + sign + 1);
+	if (n == 0)
+		return (ft_strdup("0"));
+	else if (n == INT_MIN)
+		return (ft_strdup("-2147483648"));
+	sign = check_sign(&n);
+	len = decimal_length(n);
+	itoa = malloc(sign + len + 1);
+	if (!itoa)
+		return (NULL);
+	itoa[sign + len] = '\0';
 	while (n != 0)
 	{
-		itoa[sign + i] = (n % 10) + '0';
+		len--;
+		itoa[sign + len] = (n % 10) + '0';
 		n /= 10;
-		i--;
 	}
 	if (sign > 0)
 		itoa[0] = '-';
 	return (itoa);
 }
 
-size_t	decimal_value(int n)
+size_t	check_sign(int	*n)
 {
-	size_t	i;
+	size_t	sign;
 
-	i = 0;
+	sign = 0;
+	if (*n < 0)
+	{
+		*n *= -1;
+		sign++;
+	}
+	return (sign);
+}
+
+size_t	decimal_length(int n)
+{
+	size_t	len;
+
+	len = 0;
 	while (n != 0)
 	{
 		n /= 10;
-		i++;
+		len++;
 	}
-	return (i);
+	return (len);
 }
