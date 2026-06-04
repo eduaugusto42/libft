@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 12:28:27 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/04 13:20:48 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/04 14:33:07 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,14 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
+	t_list	*tmp;
+
 	if (!lst || !del)
 		return ;
-	if (*lst != NULL)
-		ft_lstclear(&(*lst)->next, del);
-	del((*lst)->content);
-	free(lst);
+	while (*lst != NULL)
+	{
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
+	}
 }
