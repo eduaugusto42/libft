@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 21:47:04 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/03 22:31:50 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/04 09:24:57 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list		*list;
+	t_list		*node;
 
-	list = malloc(sizeof(t_list));
-	if (!list)
+	node = malloc(sizeof(t_list));
+	if (!node)
 		return (NULL);
-	list -> content = content;
-	list -> next = NULL;
+	node->content = content;
+	node->next = NULL;
 
-	return (list);
+	return (node);
 }
