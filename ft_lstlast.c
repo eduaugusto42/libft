@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 10:25:44 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/04 12:44:40 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/04 13:20:22 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ t_list	*ft_lstlast(t_list *lst)
 	if (lst->next == NULL)
 		return (lst);
 	else
-	 	return (ft_lstlast(lst->next));
+		return (ft_lstlast(lst->next));
 }

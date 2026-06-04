@@ -6,13 +6,13 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 12:28:27 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/04 13:18:52 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/04 13:20:48 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	if (!lst || !del)
 		return ;
