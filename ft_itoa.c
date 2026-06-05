@@ -6,14 +6,14 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 13:32:30 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/03 14:14:19 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/05 11:26:28 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	check_sign(int	*n);
-size_t	num_len(int n);
+static int	check_sign(int	*n);
+static int	num_len(int n);
 
 char	*ft_itoa(int n)
 {
@@ -42,9 +42,9 @@ char	*ft_itoa(int n)
 	return (itoa);
 }
 
-size_t	check_sign(int	*n)
+static int	check_sign(int	*n)
 {
-	size_t	sign;
+	int	sign;
 
 	sign = 0;
 	if (*n < 0)
@@ -55,9 +55,9 @@ size_t	check_sign(int	*n)
 	return (sign);
 }
 
-size_t	num_len(int n)
+static int	num_len(int n)
 {
-	size_t	len;
+	int	len;
 
 	len = 0;
 	while (n != 0)

@@ -6,15 +6,15 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 09:52:26 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/01 11:39:34 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/05 11:32:18 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s);
-size_t	ft_strlen(char const	*s);
-size_t	is_set(char const	c, char	const *set);
+char		*ft_strdup(const char *s);
+size_t		ft_strlen(char const	*s);
+static int	is_set(char const	c, char	const *set);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -43,7 +43,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (s2);
 }
 
-size_t	is_set(char const	c, char	const *set)
+static int	is_set(char const	c, char	const *set)
 {
 	while (*set)
 	{

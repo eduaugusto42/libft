@@ -6,14 +6,14 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 12:39:35 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/02 17:38:04 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/05 11:38:44 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**free_str(char	**str, size_t j);
-int		word_count(const char	*s, char c);
+char		**free_str(char	**str, size_t j);
+static int	word_count(const char	*s, char c);
 
 char	**ft_split(char const *s, char c)
 {
@@ -55,9 +55,9 @@ char	**free_str(char	**str, size_t j)
 	return (NULL);
 }
 
-int	word_count(const char	*s, char c)
+static int	word_count(const char	*s, char c)
 {
-	size_t	count;
+	int		count;
 	size_t	i;
 
 	count = 0;
