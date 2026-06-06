@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 20:27:44 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/05 09:54:29 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/06 11:03:04 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,15 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst)
 	{
 		content = f(lst->content);
+		if (!content)
+		{
+			ft_lstclear(&new_list, del);
+			return (NULL);
+		}
 		new_node = ft_lstnew(content);
 		if (!new_node)
 		{
 			ft_lstclear(&new_list, del);
-			del(content);
 			return (NULL);
 		}
 		ft_lstadd_back(&new_list, new_node);
