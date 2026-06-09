@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 12:26:58 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/02 17:53:59 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:02:48 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,5 @@ int	ft_isalnum(int c)
 		|| (c >= 'A' && c <= 'Z')
 		|| (c >= '0' && c <= '9'))
 		return (1);
-	else
-	{
-		return (0);
-	}
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 12:35:59 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/02 17:51:01 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:13:56 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char		*d;
-	const char	*s;
+	unsigned char	*d;
+	unsigned char	*s;
 	size_t		i;
 
-	d = (char *)dest;
-	s = (const char *)src;
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
 	if (d < s)
 	{
 		i = 0;

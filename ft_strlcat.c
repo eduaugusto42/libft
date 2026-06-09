@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 19:25:56 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/05/26 22:43:41 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:31:03 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
-	length = 0;
-	while (src[length] != '\0')
-		length++;
+	length = ft_strlen(src);
 	while (i < size && dst[i] != '\0')
 		i++;
 	if (i >= size)

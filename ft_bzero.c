@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 16:25:51 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/02 16:21:59 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:10:07 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,6 @@ void	*ft_bzero(void *s, size_t n)
 
 	p = (unsigned char *)s;
 	while (n > 0)
-	{
-		*p = '\0';
-		p++;
-		n--;
-	}
+		p[--n] = '\0';
 	return (s);
 }

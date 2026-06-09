@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 09:13:31 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/02 17:38:47 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/09 17:43:21 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	unsigned char	uc;
+
+	uc = (unsigned char)c;
 	while (1)
 	{
-		if (*s == c)
+		if (*s == uc)
 			return ((char *)s);
 		if (*s == '\0')
-			break ;
+			break;
 		s++;
 	}
 	return (NULL);

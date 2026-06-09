@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 12:35:59 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/02 18:23:03 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:11:57 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	s = (unsigned char *)src;
 	while (n > 0)
 	{
-		*d++ = *s++;
 		n--;
+		d[n] = s[n];
 	}
 	return (dest);
 }

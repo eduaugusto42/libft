@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 09:13:10 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/02 17:48:42 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/09 17:45:47 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*last;
+	char			*last;
+	unsigned char	uc;
 
 	last = NULL;
+	uc = c;
 	while (1)
 	{
-		if (*s == c)
+		if (*s == uc)
 			last = (char *)s;
 		if (*s == '\0')
-			break ;
+			break;
 		s++;
 	}
 	return (last);

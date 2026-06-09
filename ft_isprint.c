@@ -6,7 +6,7 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 12:26:58 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/05/25 13:05:19 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:03:19 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@ int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
