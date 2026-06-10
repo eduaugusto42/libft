@@ -6,11 +6,11 @@
 /*   By: eduaaugu <eduaaugu@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 13:06:17 by eduaaugu          #+#    #+#             */
-/*   Updated: 2026/06/02 18:07:17 by eduaaugu         ###   ########.fr       */
+/*   Updated: 2026/06/10 12:59:27 by eduaaugu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
